@@ -1,0 +1,98 @@
+Introduction for Jenkins:
+=========================
+
+what is jenkins:
+=================
+Jenkins is an open-source automation tool mainly used in DevOps to build, test, and deploy applications automatically.
+
+What Jenkins does:
+======================
+
+1. Automatically pulls code from Git (GitHub, GitLab, Bitbucket)
+
+2. Builds the application (Maven, Gradle, npm, etc.)
+
+3. Runs tests (unit, integration, automation)
+
+4. Deploys the app to servers, Docker, Kubernetes, cloud, etc.
+
+5. Sends build status (success/failure) notifications
+
+Why Jenkins is used:
+=====================
+
+Supports CI/CD (Continuous Integration & Continuous Deployment)
+
+Detects bugs early
+
+Saves time and reduces human errors
+
+Huge plugin support (Git, Maven, Docker, Kubernetes, SonarQube)
+
+Real-world example:
+========================
+
+Developer pushes code → Jenkins auto builds → tests → creates JAR/WAR → deploys → done 🚀
+
+Lifecycle in Jenkins Pipeline stages::
+======================================
+Checkout → Build → Test → Analyze → Package → Deploy → Monitor
+
+1.Code Commit
+-------------
+
+Developer writes code and pushes it to Git (GitHub/GitLab/Bitbucket).
+
+2.Trigger Jenkins
+-----------------
+
+Jenkins job starts automatically (via webhook, SCM poll, or manual trigger).
+
+3.Checkout Source Code
+----------------------
+Jenkins pulls the latest code from the repository.
+
+4.Build
+------------
+Code is compiled and packaged (JAR/WAR/Docker image).
+
+Tools: Maven, Gradle, npm, Docker.
+
+5.Test
+------------
+
+Runs automated tests.
+
+Unit tests, integration tests, UI tests.
+
+6. Static Code Analysis (Optional)
+-----------------------------------
+
+Code quality and security checks.
+
+Tools: SonarQube, Checkstyle.
+
+7. Artifact Creation & Storage
+-------------------------------
+Build artifacts are created and stored.
+
+Example: Nexus, Artifactory, Docker Registry.
+
+8.Deploy
+-------
+Application is deployed to target environment.
+
+Dev → QA → Staging → Production
+
+Tools: Tomcat, Kubernetes, AWS, Azure.
+
+9.Verification
+---------------
+
+Smoke tests / health checks run after deployment.
+
+10.Notification & Feedback
+------------------------
+Jenkins sends build status to developers.
+
+Email, Slack, Teams.
