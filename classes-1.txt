@@ -74,3 +74,70 @@ Checkout → Build → Test → Analyze → Package → Deploy → Monitor
 ------------------------
     Jenkins sends build status to developers.
     Email, Slack, Teams.
+
+CI-CD Stages
+---------------
+1 Stage 1 (Continuous Download)
+	In this stage Jenkins is integrated with the remote version controlling system(git) in susch a way that when ever developers make changes to the code it will detect those changes and download from the remote repository
+
+2 Stage 2 (Continuous Build)
+	The code downloaded in  the previous stage has to be converted into an artifact.This artifact can be in the form of a jar,war,ear,exe file.This process is called as the build process and Jenkins will perform this step with the help of plugins like ant,maven,ms build etc
+
+3 Stage 3 (Continuous Deployment)
+	The artifact created in the previous stage has to e deployed into QA servers.The testing servers might be running on application servers like tomcat,jboss weblogic etc.The artifact has to deployed into these servers where testers can access and test the application
+
+4 Stage 4 (Continuous Testing)
+	The testers will prepare some automation testing programs using tools like selenium, tosca,codedui etc.These testing programs
+will be uploaded by the testers into the git version controlling system.Jenkins should download these programs and run them on the application that was deployed into the testing servers.If testing fails jenkins will send automated notifiactions to the team memebers and developers should fix the defects and upload the modified code into the git repository.Jenkins will again trigger the above 4 steps
+
+5 Stage 5 (Continuous Delivery)
+	If testing passes then jenkins will deploy the artifact into the production servers after taking approvals from the team members.Once it is deployed into the prod servers the enduser/client can start accessing it.
+
+Note: The first four stages are called Continuous Integration and the fifth stage is called continuous delivery
+
+Stage 1 (Continuous Download)
+------------------------------
+1 Open the dashboard of jenkins(localhost:8080)
+2 Click on New item
+3 Enter item name as "Development"
+4 Click on Free style project
+5 Click on Ok
+6 Go to Source code management
+7 Select Git
+8 Enter the github url where developers have uploaded the code
+  https://github.com/selenium-saikrishna/maven.git
+9 Click on Apply--->save
+10 Go to the dashboard of jenkins
+11 Go to the Development job--->click on Build icon
+	The above job will download all the code uploaded by 
+the developer into the github repository.
+
+
+Setting the path of maven in jenkins
+--------------------------------------
+1 Open https://maven.apache.org/download.cgi
+2 Go to Files section on this page and download th bin.zip    version.
+3 Extract it and open it and copy its path
+4 Open the dashboard of jenkins
+5 Click on manage jenkins
+6 Click on Global tool configurations
+7 Go to Maven installations
+8 Click on Add maven
+9 Enter some anme for maven(mymaven)
+10 Paste the path of Maven in MAVEN_HOME location
+12 Apply--->save
+
+
+Stage 2 (Continuous Build)
+1 Open the dashboard of jenkins
+2 Go to the development job--->click on configure
+3 Go to Build section
+4 Click on add build step
+5 Click on Invoke top level maven targets
+6 Select maven as mymaven
+7 Enter goal as   package
+8 Click on Apply--->save
+9 Go to dashboard of jenkins
+10 Go to the development job--->click on Build icon
+	The above job will now create an artifact from the code that was downloaded in the previous stage.This artifact comes in the format of a war file
+
