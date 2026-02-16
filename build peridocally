@@ -1,0 +1,18 @@
+1) Build periodically (Cronjob) 
+“This trigger runs the Jenkins job on a schedule, like every night or every 10 minutes, even if there are no code changes. It’s mainly used for regular builds, nightly builds, and health checks.”
+Example use: nightly build at 1 AM.
+
+2) Poll SCM
+
+“In Poll SCM, Jenkins checks the Git repository at a fixed time interval. If Jenkins finds any new commit, then it triggers the build. If there’s no change, it won’t run.”
+Key point: Jenkins is polling (pulling) Git again and again.
+
+3) GitHub Webhook
+
+“In webhook, GitHub directly notifies Jenkins whenever code is pushed or a pull request is created. So Jenkins starts the build immediately. It’s faster and more efficient than Poll SCM.”
+Key point: GitHub pushes the event to Jenkins.
+
+4) Trigger after another job
+
+“This trigger starts a job automatically after another job completes. We use it to create a pipeline flow like: Build job → Test job → Deploy job.”
+Key point: job chaining / job dependency.
