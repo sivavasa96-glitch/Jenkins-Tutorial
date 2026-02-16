@@ -1,3 +1,6 @@
+6) Build Triggers:
+===================
+
 1) Build periodically (Cronjob) 
 “This trigger runs the Jenkins job on a schedule, like every night or every 10 minutes, even if there are no code changes. It’s mainly used for regular builds, nightly builds, and health checks.”
 Example use: nightly build at 1 AM.
