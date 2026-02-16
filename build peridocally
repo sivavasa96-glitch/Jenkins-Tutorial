@@ -1,4 +1,32 @@
-6) Build Triggers:
+✅ 1) Jenkins Job (Project)
+What is a Jenkinsjob
+
+“A Jenkins job is basically a task or project that Jenkins runs. A job can be used to build code, run tests, create artifacts, or deploy the application.”
+
+✅ Types of Jenkins Jobs
+========================
+
+1) Freestyle Project
+
+“Freestyle is the basic Jenkins job. It is created using the Jenkins UI and we configure steps like Git checkout, build commands, and post-build actions. It’s simple but not best for complex CI/CD.”
+
+2) Pipeline
+
+“Pipeline job is used to create CI/CD using code. We write the stages like build, test, deploy inside a Jenkinsfile. It is better for real-time projects because it is reusable and version controlled.”
+
+3) Multibranch Pipeline
+
+“This job automatically detects branches in Git like main, dev, feature branches. It runs builds separately for each branch if Jenkinsfile is present. It is very useful in real-time projects.”
+
+4) Folder
+
+“Folder is used to organize Jenkins jobs. When there are many jobs, we keep them inside folders like Dev, QA, Prod, or based on teams.”
+
+5) GitHub Organization
+
+“This job is used when we want Jenkins to scan an entire GitHub organization. It automatically finds all repositories and builds them if Jenkinsfile exists.”
+
+✅ 6) Build Triggers:
 ===================
 
 1) Build periodically (Cronjob) 
