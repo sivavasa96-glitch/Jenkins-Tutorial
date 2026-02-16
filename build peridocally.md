@@ -51,7 +51,7 @@ Key point: GitHub pushes the event to Jenkins.
 Key point: job chaining / job dependency.
 
 ✅ 7) Plugins (Jenkins):
-==========≈==============
+=========================
 
 What are Jenkins plugins?
 
