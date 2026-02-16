@@ -16,3 +16,14 @@ Key point: GitHub pushes the event to Jenkins.
 
 “This trigger starts a job automatically after another job completes. We use it to create a pipeline flow like: Build job → Test job → Deploy job.”
 Key point: job chaining / job dependency.
+
+✅ 7) Plugins (Jenkins):
+==========≈==============
+
+What are Jenkins plugins?
+
+“Plugins are add-ons in Jenkins. Jenkins by default has limited features, but plugins help us integrate Jenkins with other tools like Git, Maven, Docker, Kubernetes, SonarQube, AWS, etc.”
+
+Why plugins are used?
+
+“We use plugins to extend Jenkins functionality. Without plugins, Jenkins cannot connect to external tools or perform advanced CI/CD tasks.”
