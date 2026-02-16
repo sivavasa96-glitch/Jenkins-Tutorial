@@ -1,10 +1,12 @@
 Jenkins Scripted Vs Declarative Pipeline:
 =====================================
+
     Jenkins supports two types of pipeline syntax, Scripted Pipelines and Declarative Pipelines. Both serve the same purpose, 
 but their approach and syntax are different.
 
 1. Scripted Pipeline:
 =====================
+
     The Scripted Pipeline is the original pipeline syntax in Jenkins, and it is based on the Groovy scripting language. 
 It provides flexibility and control over the pipeline process. It requires a better understanding of Groovy scripting for the 
 implementation of the complex code.
@@ -26,6 +28,7 @@ node {
 
 2. Declarative Pipeline:
 ==========================
+
     A Declarative Pipeline is a structured and simplified way to define a Jenkins CI/CD pipeline using a predefined syntax.
 It is written in a file called Jenkinsfile and stored in the source code repository.
 
@@ -64,6 +67,7 @@ exam:
 
 Explanation of Each Section:
 ===========================
+
 🔹 pipeline
 Root block that defines a Declarative Pipeline
 🔹 agent any

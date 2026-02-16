@@ -3,10 +3,12 @@ Introduction for Jenkins:
 
 what is jenkins:
 =================
+
 Jenkins is an open-source automation tool mainly used in DevOps to build, test, and deploy applications automatically.
 
 What Jenkins does:
 ======================
+
     1. Automatically pulls code from Git (GitHub, GitLab, Bitbucket)
     2. Builds the application (Maven, Gradle, npm, etc.)
     3. Runs tests (unit, integration, automation)
@@ -15,6 +17,7 @@ What Jenkins does:
 
 Why Jenkins is used:
 =====================
+
     1.Supports CI/CD (Continuous Integration & Continuous Deployment)
     2.Detects bugs early
     3.Saves time and reduces human errors
@@ -22,61 +25,74 @@ Why Jenkins is used:
 
 Real-world example:
 ========================
+
     Developer pushes code → Jenkins auto builds → tests → creates JAR/WAR → deploys → done 🚀
 
 Lifecycle in Jenkins Pipeline stages::
 ======================================
+
 Checkout → Build → Test → Analyze → Package → Deploy → Monitor
 
 1.Code Commit
 -------------
+
     Developer writes code and pushes it to Git (GitHub/GitLab/Bitbucket).
 
 2.Trigger Jenkins
 -----------------
+
     Jenkins job starts automatically (via webhook, SCM poll, or manual trigger).
 
 3.Checkout Source Code
 ----------------------
+
     Jenkins pulls the latest code from the repository.
 
 4.Build
 ------------
+
     Code is compiled and packaged (JAR/WAR/Docker image).
     Tools: Maven, Gradle, npm, Docker.
 
 5.Test
 ------------
+
     Runs automated tests.
     Unit tests, integration tests, UI tests.
 
 6. Static Code Analysis (Optional)
 -----------------------------------
+
     Code quality and security checks.
     Tools: SonarQube, Checkstyle.
 
 7. Artifact Creation & Storage
 -------------------------------
+
     Build artifacts are created and stored.
     Example: Nexus, Artifactory, Docker Registry.
 
 8.Deploy
 -------
+
     Application is deployed to target environment.
     Dev → QA → Staging → Production
     Tools: Tomcat, Kubernetes, AWS, Azure.
 
 9.Verification
 ---------------
+
     Smoke tests / health checks run after deployment.
 
 10.Notification & Feedback
 ------------------------
+
     Jenkins sends build status to developers.
     Email, Slack, Teams.
 
 CI-CD Stages
 ---------------
+
 1 Stage 1 (Continuous Download)
 	In this stage Jenkins is integrated with the remote version controlling system(git) in susch a way that when ever developers make changes to the code it will detect those changes and download from the remote repository
 
@@ -97,6 +113,7 @@ Note: The first four stages are called Continuous Integration and the fifth stag
 
 Stage 1 (Continuous Download)
 ------------------------------
+
 1 Open the dashboard of jenkins(localhost:8080)
 2 Click on New item
 3 Enter item name as "Development"
@@ -115,6 +132,7 @@ the developer into the github repository.
 
 Setting the path of maven in jenkins
 --------------------------------------
+
 1 Open https://maven.apache.org/download.cgi
 2 Go to Files section on this page and download th bin.zip    version.
 3 Extract it and open it and copy its path
@@ -130,6 +148,7 @@ Setting the path of maven in jenkins
 
 Stage 2 (Continuous Build):
 ===============================
+
 1 Open the dashboard of jenkins
 2 Go to the development job--->click on configure
 3 Go to Build section
@@ -144,6 +163,7 @@ Stage 2 (Continuous Build):
 
 Step 3 (Continuous Deployment)
 ---------------------------------
+
 1 Open the dashboard of jenkins
 2 Click on Manage Jenkins-->Manage Plugins
 3 Go to Available tab-->Search for "Deploy to   container" plugin
@@ -156,6 +176,7 @@ Step 3 (Continuous Deployment)
 
 Configuring tomcat
 ====================
+
 1 Download tomcat 7 from 
   https://tomcat.apache.org/download-70.cgi
 2 Extract it and open it-->open the conf folder
@@ -172,6 +193,7 @@ from any browser(localhost:8899)
 
 Step 4 (Continuous Testing):
 -------------------------------
+
 1 Open the dashboard of jenkins
 2 Click on Newitem-->Give item name as "Testing"
 3 Click on Free style project-->ok
@@ -203,6 +225,7 @@ Note:To link the development job with the testing job
 
 Step 5 (Continuous Delivary):
 ===============================
+
 We have created2 jobs in jenkins(development,testing)
 development has has done the below three activities
 1 Downloading the development code from git
@@ -234,6 +257,7 @@ This can be done using a plugin called "copy artifact plugin"
 
 Setting the path of java,maven and git
 --------------------------------------------
+
 1 Open the dashboard of jenkins(192.168.61.11:8080)
 2 Click on Manage Jenkins-->Global tool configuration
 3 Go to JDK section-->Click on jdk installations-->give some name to java--> paste the pasth of java home

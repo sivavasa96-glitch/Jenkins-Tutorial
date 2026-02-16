@@ -1,5 +1,6 @@
 Creating a job in Jenkins
 ---------------------------
+
 1 Open the dashboard of jenkins(localhost:8080)
 2 Click on New item
 3 Give some name to item(sample)
@@ -15,6 +16,7 @@ Creating a job in Jenkins
 
 Scheduling the build for a particular date and time
 ------------------------------------------------
+
 1 Open the dashboard of jenkins
 2 Go to the sample job we created
 3 click on downward arrow-->Configure
@@ -24,6 +26,7 @@ Scheduling the build for a particular date and time
 
 Sending automated email from jenkins
 --------------------------------------
+
 1 Open the dashboard of jenkins
 2 Go to the sample job we creaated
 3 click on downward arrow-->configure
@@ -46,6 +49,7 @@ Sending automated email from jenkins
 
 Setting the path of git in jenkins
 -------------------------------------
+
 1 Install git from https://git-scm.com/downloads
 2 Open c:-->programs files-->git-->bin
   Copy the path of git.exe

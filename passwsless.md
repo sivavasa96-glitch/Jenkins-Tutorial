@@ -1,5 +1,6 @@
 For passwordless ssh
 =========================
+
 1 Go to jenkins server 
 2 when we install jenkins a user called jenkins
   gets created.we should swithc into this user   account
@@ -67,6 +68,7 @@ sh 'scp /var/lib/jenkins/workspace/Dev_01/webapp/target/webapp.war vagrant@192.1
 
 BlueOcean UI
 ==================
+
 This is a new user interface of Jenkins with more 
 graphical content
 To install blue ocean

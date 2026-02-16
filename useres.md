@@ -1,5 +1,6 @@
 Creating users in Jenkins
 ===========================
+
 1 Open the dashboard of jenkins
 2 click on manage jenkins
 3 click on manage users
@@ -8,6 +9,7 @@ Creating users in Jenkins
 
 Creating roles and assgning
 ==============================
+
 1 Open the dashboard of jenkins
 2 click on manage jenkins
 3 click on manage plugins

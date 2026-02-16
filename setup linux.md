@@ -1,5 +1,6 @@
 Installing jenkins on Linux machines
 =========================================
+
 1 Go to the jenkins server linux machine(username: vagrant password:vagrant)
 2 sudo passwd root
   enter some root password
@@ -51,6 +52,7 @@ RHEL / CentOS / Amazon Linux:
 
 🔹 Install Jenkins on Ubuntu / Debian:
 =========================================
+
 Step 1: Add Jenkins Repository & Key
     curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
      /usr/share/keyrings/jenkins-keyring.asc > /dev/null
@@ -61,26 +63,31 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
 
 Step 2: Install Jenkins:
 ------------------------
+
     sudo apt update
     sudo apt install jenkins -y
 
 Step 3: Start & Enable Jenkins:
 ---------------------------------
+
     sudo systemctl start jenkins
     sudo systemctl enable jenkins
     sudo systemctl status jenkins
 
 Step 4: Open Jenkins in Browser:
 ------------------------------
+
 http://<server-ip>:8080 (or http://localhost:8080)
 
 Step 5: Unlock Jenkins:
 -------------------------
+
     sudo cat /var/lib/jenkins/secrets/initialAdminPassword
     Copy the password → paste in browser.
 
 Step 6: Finish Setup:
 -----------------------
+
     Install Suggested Plugins
     Create Admin User
 
@@ -88,8 +95,10 @@ Jenkins Dashboard opens 🎉
 
 Install Jenkins on RHEL / CentOS / Amazon Linux:
 ===============================================
+
 Step 1: Add Jenkins Repo:
 --------------------------
+
     sudo wget -O /etc/yum.repos.d/jenkins.repo \
     https://pkg.jenkins.io/redhat-stable/jenkins.repo
 
@@ -97,10 +106,12 @@ Step 1: Add Jenkins Repo:
 
 Step 2: Install Jenkins:
 --------------------------
+
     sudo yum install jenkins -y
 
 Step 3: Start Jenkins:
 ------------------------
+
     sudo systemctl start jenkins
     sudo systemctl enable jenkins
 
