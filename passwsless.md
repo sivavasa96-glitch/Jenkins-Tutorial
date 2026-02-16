@@ -1,32 +1,32 @@
 For passwordless ssh
 =========================
 
-1 Go to jenkins server 
-2 when we install jenkins a user called jenkins
-  gets created.we should swithc into this user   account
-  sudo su - jenkins
-3 ssh-keygen
-  This will generate 2 keys public key and private     key.The public key should be copied into QAServer 
-  and prodserver
-4 ssh-copy-id vagrant@ipaddress_of_QAServer
-  ssh-copy-id vagrant@ipaddress_of_ProdServer
+  1.  Go to jenkins server 
+  2. when we install jenkins a user called jenkins
+    gets created.we should swithc into this user   account
+    sudo su - jenkins
+  3. ssh-keygen
+    This will generate 2 keys public key and private     key.The public key should be copied into QAServer 
+    and prodserver
+  4. ssh-copy-id vagrant@ipaddress_of_QAServer
+    ssh-copy-id vagrant@ipaddress_of_ProdServer
 
-5 Go to the dashboard of jenkins
-6 goto the Dev_01 job created-->Click on configure
-7  go to pipeline section-->Pipeline syntax
-8 we should downlaod the testing code from git
-  and run a jar file which is present in the repo
-9 select git-->Specify the url of the testing github
-  repository
-10 click on generate pipelins script
-11 copy this script into jenkinsfile
-12 to run the jar file to executing the automation    testing programs
-13 clcik on pipelinesyntax-->Select sh:shell
-14 java -jar path_of_jar file
-15 click on generate pipelins script
-16 copy the groovy script and paste in jenkins file
-17 To deploy the war file in prod env repeat the scp
-   command with production url
+  5. Go to the dashboard of jenkins
+  6. goto the Dev_01 job created-->Click on configure
+  7. go to pipeline section-->Pipeline syntax
+  8. we should downlaod the testing code from git
+    and run a jar file which is present in the repo
+  9. select git-->Specify the url of the testing github
+    repository
+  10. click on generate pipelins script
+  11. copy this script into jenkinsfile
+  12. to run the jar file to executing the automation    testing programs
+  13. clcik on pipelinesyntax-->Select sh:shell
+  14. java -jar path_of_jar file
+  15. click on generate pipelins script
+  16. copy the groovy script and paste in jenkins file
+  17. To deploy the war file in prod env repeat the scp
+    command with production url
 
 
 Staging in pipelins scripts
