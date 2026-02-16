@@ -69,11 +69,11 @@ sh 'scp /var/lib/jenkins/workspace/Dev_01/webapp/target/webapp.war vagrant@192.1
 BlueOcean UI
 ==================
 
-This is a new user interface of Jenkins with more 
-graphical content
-To install blue ocean
-1 Open the dashboard of jenkins
-2 Click on manage jenkins-->manage plugins
-3 go to available section-->Search for blue ocean
-4 Install it
-5 Restart jenkins
+  This is a new user interface of Jenkins with more 
+  graphical content
+  To install blue ocean
+  1. Open the dashboard of jenkins
+  2. Click on manage jenkins-->manage plugins
+  3. go to available section-->Search for blue ocean
+  4. Install it
+  5. Restart jenkins
