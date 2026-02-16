@@ -258,9 +258,9 @@ This can be done using a plugin called "copy artifact plugin"
 Setting the path of java,maven and git
 --------------------------------------------
 
-1 Open the dashboard of jenkins(192.168.61.11:8080)
-2 Click on Manage Jenkins-->Global tool configuration
-3 Go to JDK section-->Click on jdk installations-->give some name to java--> paste the pasth of java home
+1. Open the dashboard of jenkins(192.168.61.11:8080)
+2. Click on Manage Jenkins-->Global tool configuration
+3. Go to JDK section-->Click on jdk installations-->give some name to java--> paste the pasth of java home
   Note: to find path of java home dir
   a) open the jenkins linux server terminal
   b) which java 

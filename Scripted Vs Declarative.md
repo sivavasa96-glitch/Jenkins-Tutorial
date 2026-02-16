@@ -87,12 +87,13 @@ Why do we use Declarative Pipeline?:
 ========================================
 
 We use Declarative Pipeline because it:
-    1.Is easy to understand (even for beginners)
-    2.Has built-in syntax validation before execution
-    3.Follows best practices automatically
-    4.Is less error-prone than Scripted Pipeline
-    5.Is recommended by Jenkins for most CI/CD projects
-    6.Works very well with Git, Maven, Docker, Kubernetes
+
+1. Is easy to understand (even for beginners)
+2. Has built-in syntax validation before execution
+3. Follows best practices automatically
+ 4. Is less error-prone than Scripted Pipeline
+5. Is recommended by Jenkins for most CI/CD projects
+6. Works very well with Git, Maven, Docker, Kubernetes
 
 👉 In real projects, teams prefer Declarative because multiple people can maintain it easily.
 
